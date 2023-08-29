@@ -33,3 +33,20 @@ create `slither.config.json`:
   "filter_paths": "lib|script|test"
 }
 ```
+
+## echidna
+
+```zsh
+echidna template.sol --contract TestToken
+echidna Template.sol --contract EchidnaTemplate --config config.yaml
+echidna abdk/template.sol --contract EchidnaTemplate --test-mode assertion
+```
+
+Config file:
+
+```yaml
+# Can set testMode to property or assertion mode depending on how you want to test the system's properties
+testMode: assertion
+# You should ALWAYS set corpusDir to track coverage
+corpusDir: corpus
+```
