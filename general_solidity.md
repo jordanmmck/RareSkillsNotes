@@ -27,3 +27,7 @@ modifier A() {
 ```
 
 so the first require runs before your function you are modifying, then the function runs, then the second require executes. so the `_` basically means "call the function you are modifying".
+
+## structs
+
+If you have a mapping of structs and the struct has a mapping inside it, then `delete` on a given item in the parent mapping won't actually delete the child mapping!
